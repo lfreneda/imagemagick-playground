@@ -1,0 +1,21 @@
+{
+  "name": "playing-with-images",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "prestart": "npm install"
+  },
+  "author": "Luiz Freneda <lfreneda@gmail.com> (http://www.freneda.com.br/)",
+  "license": "ISC",
+  "dependencies": {
+    "circle-image": "^1.0.43",
+    "easyimage": "^2.1.0",
+    "restify": "^4.3.0"
+  },
+  "engines" : {
+    "node" : "6.4.0",
+    "npm": "3.10.3"
+  }
+}
