@@ -10,12 +10,13 @@
   "author": "Luiz Freneda <lfreneda@gmail.com> (http://www.freneda.com.br/)",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
     "circle-image": "^1.0.43",
     "easyimage": "^2.1.0",
     "restify": "^4.3.0"
   },
-  "engines" : {
-    "node" : "6.4.0",
+  "engines": {
+    "node": "6.4.0",
     "npm": "3.10.3"
   }
 }
