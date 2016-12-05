@@ -54,43 +54,43 @@ drawCircleOnCircleImage = (options, callback) ->
 #    options.thumbnailCircleOnlineFilePath = destinationFilePath
 #    callback null, options
 #
-#pinOnline = (options, callback) ->
-#  destinationFilePath = __dirname + '/output/pin-online.png'
-#
-#  onOk = () ->
-#    options.thumbnailPinCircleOnlineFilePath = destinationFilePath
-#    callback null, options
-#
-#  easyimg.thumbnail({
-#    src: options.thumbnailCircleOnlineFilePath
-#    dst: destinationFilePath,
-#    width:28
-#    height:28
-#  }).then onOk, onErr
-#
-#pinOffline = (options, callback) ->
-#  destinationFilePath = __dirname + '/output/pin-offline.png'
-#
-#  onOk = () ->
-#    options.thumbnailPinCircleOfflineFilePath = destinationFilePath
-#    callback null, options
-#
-#  easyimg.thumbnail({
-#    src: options.thumbnailCircleOfflineFilePath
-#    dst: destinationFilePath
-#    width:28
-#    height:28
-#  }).then onOk, onErr
+pinOnline = (options, callback) ->
+  destinationFilePath = __dirname + '/output/pin-online.png'
+
+  onOk = () ->
+    options.thumbnailPinCircleOnlineFilePath = destinationFilePath
+    callback null, options
+
+  easyimg.thumbnail({
+    src: '/home/ryuk/lfreneda/work/others/playing-with-images/c.png'
+    dst: destinationFilePath,
+    width:32
+    height:32
+  }).then onOk, onErr
+
+pinOffline = (options, callback) ->
+  destinationFilePath = __dirname + '/output/pin-offline.png'
+
+  onOk = () ->
+    options.thumbnailPinCircleOfflineFilePath = destinationFilePath
+    callback null, options
+
+  easyimg.thumbnail({
+    src: '/home/ryuk/lfreneda/work/others/playing-with-images/d.png'
+    dst: destinationFilePath
+    width:32
+    height:32
+  }).then onOk, onErr
 
 waterfall [
   toDisk
-  thumbnails
-  circleImageDefaultColor
-  drawCircleOnCircleImage
+#  thumbnails
+#  circleImageDefaultColor
+#  drawCircleOnCircleImage
 #  circleImageOfflineColor
 #  circleImageOnlineColor
-#  pinOnline
-#  pinOffline
+  pinOnline
+  pinOffline
 
 ], (err, result) ->
   if err

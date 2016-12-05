@@ -1,3 +1,4 @@
- convert -size 200x200 xc:none -fill black -draw "translate 150,45 circle 0,0 40,0" draw_circle_global.png
- convert a.png b.png -flatten c.png
+convert -size 200x200 xc:none -fill black -draw "translate 150,45 circle 0,0 40,0" draw_circle_global.png
+convert a.png b.png -flatten c.png
+convert circle_thumb.png half-bordered-circle-offline.png -background 'rgba(0,0,0,0)' -flatten d.png
 
